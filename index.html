@@ -8,9 +8,8 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./target/targetsFesc.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-	      <a-asset-item id="avatarModel" src="./models/vinayagar/Vinayagar.glb"></a-asset-item>
+	      <a-asset-item id="softModel" src="./models/software/software.glb"></a-asset-item>
 	      <a-asset-item id="manModel" src="./models/peter/PeterHeadSimpleHairMesh.glb"></a-asset-item>
-        <img id="soft" src="./img/imgSoftware.jpg" />
         <img id="dis" src="./img/imgDiseño.jpg" />
         <img id="mod" src="./img/imgModas.jpg" />
         <img id="tur" src="./img/imgTurismo.png" />
@@ -19,7 +18,9 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane src="#soft" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+        <a-gltf-model rotation="50 50 50 " position="0 0 0.1" scale="0.3 0.3 0.3" src="#softModel"
+animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
         <a-plane src="#dis" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
