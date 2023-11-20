@@ -1,22 +1,55 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="es">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>FESC - WebAR</title>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./target/targetsFesc.mind; maxTrack: 4" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-assets>
-        <a-asset-item id="softmodel" src="./models/software.glb"></a-asset-item>
-      </a-assets>
+    <div class="logo">
+      <img class="imgLogo" src="./img/LogoFesc.png" alt="LogoFesc" />
+    </div>
+    <div class="container">
+      <header>
+        <h1>Bienvenido a nuestra plataforma de Realidad Aumentada</h1>
+        <p>
+          Podras ver modelos 3D relacionados a las carreras de nuestra
+          institución al detectar alguna de estas tarjetas:
+        </p>
+      </header>
+      <div class="targets">
+        <img class="target" src="./img/avatarSoftware.jpg" />
+        <img class="target" src="./img/avatarDiseño.jpg" />
+        <img class="target" src="./img/avatarModas.jpg" />
+        <img class="target" src="./img/avatarTurismo.jpg" />
+      </div>
+      <section class="wrapper">
+        <a href="./pagRealidad.html" class="button"
+          >Iniciar realidad aumentada</a
+        >
+      </section>
+    </div>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="0 200 0 " position="0 -0.25 0" scale="0.2 0.2 0.2" src="#softmodel" animation-mixer>
-      </a-entity>
-    </a-scene>
+    <svg
+      style="visibility: hidden; position: absolute"
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+    >
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="goo"
+          />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
   </body>
 </html>

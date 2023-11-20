@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('../img/fondoM.jpg');
+    background-size: cover;
+    background-color: #85C1E9;
+    color: #121212;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.logo {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.imgLogo {
+    height: 7em;
+}
+
+.targets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.target {
+    height: 10rem;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.wrapper {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .imgLogo {
+        height: 5em;
+    }
+
+    .target {
+        margin-top: 1rem;
+    }
+}
+
+.wrapper {
+    padding: 1.5rem 0;
+    -webkit-filter: url('#goo');
+            filter: url('#goo');
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    background: #3498db;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.button:before,
+.button:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: #3498db;
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    z-index: -1;
+}
+
+.button:before {
+    top: -25%;
+    left: 20%;
+}
+
+.button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+    -webkit-transform: none;
+            transform: none;
+}
