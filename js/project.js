@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const askButtom = document.querySelector('#ask-button');
-    askButtom.addEventListener("click", event => {
+    const askButtomSoft = document.querySelector('#ask-button-sof');
+    askButtomSoft.addEventListener("click", event => {
       window.location.href = "https://www.fesc.edu.co/micrositios/software/"
+    });
+    const askButtomGraf = document.querySelector('#ask-button-graf');
+    askButtomGraf.addEventListener("click", event => {
+      window.location.href = "https://www.fesc.edu.co/micrositios/grafico/"
     });
   })
