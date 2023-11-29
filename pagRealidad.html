@@ -13,6 +13,7 @@
       <a-assets>
         <a-asset-item id="softmodel" src="./models/software.glb"></a-asset-item>
         <a-asset-item id="grafmodel" src="./models/grafico.glb"></a-asset-item>
+        <a-asset-item id="turmodel" src="./models/turismo.glb"></a-asset-item>
         <img id="icon-ask" src="./img/pregunta.png">
       </a-assets>
 
@@ -25,6 +26,10 @@
       <a-entity mindar-image-target="targetIndex: 1">
         <a-gltf-model rotation="0 180 0 " position="0 -0.25 0" scale="0.2 0.2 0.2" src="#grafmodel" animation-mixer>
         <a-image visible="true" id="ask-button-graf" class="clickable" src="#icon-ask" rotation="0 180 0 " position="3 5 0" height="0.6" width="0.6" animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" material="" geometry=""></a-image>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 3">
+        <a-gltf-model rotation="0 180 0 " position="0 -0.25 0" scale="0.2 0.2 0.2" src="#turmodel" animation-mixer>
+        <a-image visible="true" id="ask-button-tur" class="clickable" src="#icon-ask" rotation="0 180 0 " position="3 5 0" height="0.6" width="0.6" animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" material="" geometry=""></a-image>
       </a-entity>
     </a-scene>
   </body>
