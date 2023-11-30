@@ -11,4 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
     askButtomTur.addEventListener("click", event => {
       window.location.href = "https://www.fesc.edu.co/micrositios/turismo/"
     });
+    const askButtomMod = document.querySelector('#ask-button-mod');
+    askButtomMod.addEventListener("click", event => {
+      window.location.href = "https://www.fesc.edu.co/micrositios/modas/"
+    });
   })
